@@ -3,11 +3,16 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 interface Props {
-  showAll: Function;
-  showWithHandle: Function;
+  showAll: () => void;
+  showWithHandle: () => void;
+  showWithoutHandle: () => void;
 }
 
-export const Filter: React.FC<Props> = ({ showAll, showWithHandle }) => {
+export const Filter: React.FC<Props> = ({
+  showAll,
+  showWithHandle,
+  showWithoutHandle,
+}) => {
   return (
     <div className="filter">
       <NavDropdown title="Фильтер" id="basic-nav-dropdown">
@@ -17,7 +22,12 @@ export const Filter: React.FC<Props> = ({ showAll, showWithHandle }) => {
         <NavDropdown.Item href="#action/3.2" onClick={() => showWithHandle()}>
           С ручкой
         </NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Без ручки</NavDropdown.Item>
+        <NavDropdown.Item
+          href="#action/3.3"
+          onClick={() => showWithoutHandle()}
+        >
+          Без ручки
+        </NavDropdown.Item>
       </NavDropdown>
     </div>
   );

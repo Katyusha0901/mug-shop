@@ -6,6 +6,8 @@ import { useState } from "react";
 export function MainPage() {
   const [visibleMugsWithHandle, setVisibleMugsWithHandle] =
     useState<boolean>(false);
+  const [visibleMugsWithoutHandle, setVisibleMugsWithoutHandle] =
+    useState<boolean>(false);
 
   function showAllGoods() {
     setVisibleMugsWithHandle(false);
@@ -15,9 +17,17 @@ export function MainPage() {
     setVisibleMugsWithHandle(true);
   }
 
+  function showGoodsWithoutHandle() {
+    setVisibleMugsWithoutHandle(true);
+  }
+
   return (
     <div className="main-page">
-      <Filter showAll={showAllGoods} showWithHandle={showGoodsWithHandle} />
+      <Filter
+        showAll={showAllGoods}
+        showWithHandle={showGoodsWithHandle}
+        showWithoutHandle={showGoodsWithoutHandle}
+      />
     </div>
   );
 }
