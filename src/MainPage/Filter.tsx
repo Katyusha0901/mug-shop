@@ -15,7 +15,7 @@ export const Filter: React.FC<Props> = ({
 }) => {
   return (
     <div className="filter">
-      <NavDropdown title="Фильтер" id="basic-nav-dropdown">
+      <NavDropdown title="Фильтр" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1" onClick={() => showAll()}>
           Показать все
         </NavDropdown.Item>
