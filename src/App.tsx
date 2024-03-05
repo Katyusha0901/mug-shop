@@ -12,7 +12,7 @@ export default function App() {
     <>
       <Header savedCount={saveGoodsLength} bagCount={goodsInBag} />
       <Routes>
-        <Route path="/" element={<MainPage />}></Route>
+        <Route path="/mug-shop" element={<MainPage />}></Route>
       </Routes>
     </>
   );
