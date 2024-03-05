@@ -1,12 +1,11 @@
 import "./MainPage.css";
 import { Filter } from "./Filter";
 import { Goods } from "./Goods";
-import { Product } from "./Goods";
-import { useEffect, useState } from "react";
+import { Good } from "./Goods";
+import { useState } from "react";
+import { Product } from "./Product";
 
 export function MainPage() {
-  //   const [visibleGoods, setVisibleGoods] = useState<Product[]>();
-
   const [visibleMugsWithHandle, setVisibleMugsWithHandle] = useState<boolean>();
 
   const [visibleMugsWithoutHandle, setVisibleMugsWithoutHandle] =
@@ -14,6 +13,7 @@ export function MainPage() {
 
   function showAllGoods() {
     setVisibleMugsWithHandle(false);
+    setVisibleMugsWithoutHandle(false);
   }
 
   function showGoodsWithHandle() {
@@ -32,9 +32,12 @@ export function MainPage() {
         return product.isWithHandle;
       } else if (visibleMugsWithoutHandle) {
         return !product.isWithHandle;
+      } else if (!visibleMugsWithHandle && !visibleMugsWithoutHandle) {
+        return product;
       }
     });
     console.log(visibleGoodsArr);
+
     return visibleGoodsArr;
   }
 
@@ -46,7 +49,11 @@ export function MainPage() {
         showWithoutHandle={showGoodsWithoutHandle}
       />
 
-      <div className="main-page__products"></div>
+      <div className="main-page__products">
+        {defineVisibleProducts().map((product: Good) => {
+          return <Product productInformation={product} />;
+        })}
+      </div>
     </div>
   );
 }

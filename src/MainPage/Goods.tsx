@@ -1,6 +1,6 @@
 import nullMug from "../images/nullMug.webp";
 
-export interface Product {
+export interface Good {
   id: number;
   name: string;
   image: string;
@@ -8,7 +8,7 @@ export interface Product {
   isWithHandle: boolean;
 }
 
-export const Goods: Product[] = [
+export const Goods: Good[] = [
   {
     id: 0,
     name: "Кружка",
