@@ -1,6 +1,6 @@
 import { createContext, ReactNode } from "react";
-import { Good } from "./MainPage/Goods";
-import nullMug from "./images/nullMug.jpg";
+import { Good } from "../MainPage/Goods";
+import nullMug from "../images/nullMug.jpg";
 
 export const SavedGoodsContext = createContext([
   {
@@ -26,6 +26,7 @@ export const GoodsContextProvider: React.FC<Props> = ({ children }) => {
       isWithHandle: true,
     },
   ];
+
   return (
     <SavedGoodsContext.Provider value={savedGoods}>
       {children}

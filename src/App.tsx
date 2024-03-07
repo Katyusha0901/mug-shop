@@ -4,12 +4,12 @@ import { useState, useContext } from "react";
 import { Header } from "./Header";
 import { MainPage } from "./MainPage/MainPage";
 import { Good } from "./MainPage/Goods";
-import { SavedGoodsContext } from "./SavedGoodsContextProvider";
-import { GoodsInBagContext } from "./GoodsInBagContextProvider";
+import { SavedGoodsContext } from "./Contexts/SavedGoodsContextProvider";
+import { GoodsInBagContext } from "./Contexts/GoodsInBagContextProvider";
 
 export default function App() {
-  const savedGoods: Good[] = useContext(SavedGoodsContext);
-  const goodsInBag: Good[] = useContext(GoodsInBagContext);
+  const savedGoods: Good[] | [] = useContext(SavedGoodsContext);
+  const goodsInBag: Good[] | [] = useContext(GoodsInBagContext);
 
   return (
     <>
