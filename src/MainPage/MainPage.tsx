@@ -5,7 +5,12 @@ import { Good } from "./Goods";
 import { useState } from "react";
 import { Product } from "./Product";
 
-export function MainPage() {
+interface Props {
+  savedGoods: Good[];
+  goodsInBag: Good[];
+}
+
+export const MainPage: React.FC<Props> = ({ savedGoods, goodsInBag }) => {
   const [visibleMugsWithHandle, setVisibleMugsWithHandle] = useState<boolean>();
 
   const [visibleMugsWithoutHandle, setVisibleMugsWithoutHandle] =
@@ -56,4 +61,4 @@ export function MainPage() {
       </div>
     </div>
   );
-}
+};

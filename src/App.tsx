@@ -15,7 +15,10 @@ export default function App() {
     <>
       <Header savedGoods={savedGoods} goodsInBag={goodsInBag} />
       <Routes>
-        <Route path="/mug-shop" element={<MainPage />}></Route>
+        <Route
+          path="/mug-shop"
+          element={<MainPage savedGoods={savedGoods} goodsInBag={goodsInBag} />}
+        ></Route>
       </Routes>
     </>
   );
