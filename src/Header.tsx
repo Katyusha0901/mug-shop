@@ -9,11 +9,11 @@ import { useState, useContext } from "react";
 import { Good } from "./MainPage/Goods";
 
 interface Props {
-  savedCount: Good[];
-  bagCount: number;
+  savedGoods: Good[];
+  goodsInBag: Good[];
 }
 
-export const Header: React.FC<Props> = ({ savedCount, bagCount }) => (
+export const Header: React.FC<Props> = ({ savedGoods, goodsInBag }) => (
   <Navbar bg="primary" data-bs-theme="dark">
     <Container>
       <Navbar.Brand href="#home">
@@ -24,10 +24,10 @@ export const Header: React.FC<Props> = ({ savedCount, bagCount }) => (
 
       <ButtonGroup className="me-2" aria-label="First group">
         <Link to="/saved" className="header__saved">
-          <Button variant="secondary">Избранное ({savedCount.length})</Button>
+          <Button variant="secondary">Избранное ({savedGoods.length})</Button>
         </Link>
         <Link to="/bag" className="header__bag">
-          <Button variant="secondary">Корзина({bagCount})</Button>
+          <Button variant="secondary">Корзина({goodsInBag.length})</Button>
         </Link>
       </ButtonGroup>
     </Container>

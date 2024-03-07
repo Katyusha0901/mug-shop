@@ -4,17 +4,16 @@ import { useState, useContext } from "react";
 import { Header } from "./Header";
 import { MainPage } from "./MainPage/MainPage";
 import { Good } from "./MainPage/Goods";
-import { GoodsContext } from "./GoodsContextProvider";
+import { SavedGoodsContext } from "./SavedGoodsContextProvider";
+import { GoodsInBagContext } from "./GoodsInBagContextProvider";
 
 export default function App() {
-  const [saveGoodsLength, setSaveGoodsLength] = useState<number>(0);
-  const [goodsInBag, setGoodsInBag] = useState<number>(0);
-
-  const savedGoods: Good[] = useContext(GoodsContext);
+  const savedGoods: Good[] = useContext(SavedGoodsContext);
+  const goodsInBag: Good[] = useContext(GoodsInBagContext);
 
   return (
     <>
-      <Header savedCount={savedGoods} bagCount={goodsInBag} />
+      <Header savedGoods={savedGoods} goodsInBag={goodsInBag} />
       <Routes>
         <Route path="/mug-shop" element={<MainPage />}></Route>
       </Routes>

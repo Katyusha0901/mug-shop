@@ -1,9 +1,8 @@
-import { useState, createContext, ReactNode } from "react";
+import { createContext, ReactNode } from "react";
 import { Good } from "./MainPage/Goods";
 import nullMug from "./images/nullMug.jpg";
-import { Children } from "react";
 
-export const GoodsContext = createContext([
+export const SavedGoodsContext = createContext([
   {
     id: 0,
     name: "Кружка",
@@ -28,6 +27,8 @@ export const GoodsContextProvider: React.FC<Props> = ({ children }) => {
     },
   ];
   return (
-    <GoodsContext.Provider value={savedGoods}>{children}</GoodsContext.Provider>
+    <SavedGoodsContext.Provider value={savedGoods}>
+      {children}
+    </SavedGoodsContext.Provider>
   );
 };
