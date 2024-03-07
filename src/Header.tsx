@@ -5,8 +5,11 @@ import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
+import { useState, useContext } from "react";
+import { Good } from "./MainPage/Goods";
+
 interface Props {
-  savedCount: number;
+  savedCount: Good[];
   bagCount: number;
 }
 
@@ -21,7 +24,7 @@ export const Header: React.FC<Props> = ({ savedCount, bagCount }) => (
 
       <ButtonGroup className="me-2" aria-label="First group">
         <Link to="/saved" className="header__saved">
-          <Button variant="secondary">Избранное ({savedCount})</Button>
+          <Button variant="secondary">Избранное ({savedCount.length})</Button>
         </Link>
         <Link to="/bag" className="header__bag">
           <Button variant="secondary">Корзина({bagCount})</Button>

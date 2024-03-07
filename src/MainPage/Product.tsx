@@ -17,7 +17,9 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
           <Card.Text>{productInformation.price} руб.</Card.Text>
           <div className="product__buttons">
             {" "}
-            <Button variant="primary">В избранное</Button>
+            <Button variant="primary">
+              {/* {isSaved ?<img src=""> : <img img src="">}  */}
+            </Button>
             <Button variant="primary">В корзину</Button>
           </div>
         </Card.Body>

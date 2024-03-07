@@ -14,6 +14,7 @@ export const Filter: React.FC<Props> = ({
   showWithoutHandle,
 }) => {
   return (
+
     <div className="filter">
       <NavDropdown title="Фильтр" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1" onClick={() => showAll()}>
