@@ -19,7 +19,7 @@ export function Header() {
     <Navbar bg="primary" data-bs-theme="dark">
       <Container>
         <Navbar.Brand href="#home">
-          <Link to="/" className="header__title">
+          <Link to="/mug-shop" className="header__title">
             Магазин Кружек
           </Link>
         </Navbar.Brand>
