@@ -5,12 +5,7 @@ import { Good } from "./Goods";
 import { useState } from "react";
 import { Product } from "./Product";
 
-interface Props {
-  savedGoods: Good[];
-  goodsInBag: Good[];
-}
-
-export const MainPage: React.FC<Props> = ({ savedGoods, goodsInBag }) => {
+export function MainPage() {
   const [visibleMugsWithHandle, setVisibleMugsWithHandle] = useState<boolean>();
 
   const [visibleMugsWithoutHandle, setVisibleMugsWithoutHandle] =
@@ -41,7 +36,6 @@ export const MainPage: React.FC<Props> = ({ savedGoods, goodsInBag }) => {
         return product;
       }
     });
-    console.log(visibleGoodsArr);
 
     return visibleGoodsArr;
   }
@@ -61,4 +55,4 @@ export const MainPage: React.FC<Props> = ({ savedGoods, goodsInBag }) => {
       </div>
     </div>
   );
-};
+}
