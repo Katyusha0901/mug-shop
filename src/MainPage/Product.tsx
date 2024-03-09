@@ -1,9 +1,11 @@
-import { Good } from "./Goods";
+import { Good } from "../Goods";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { GoodsContext } from "../Context/GoodsContextProvider";
-import { useState, useContext } from "react";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+
 import "./Product.css";
 
 interface Props {
@@ -21,7 +23,10 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
   return (
     <div className="product">
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={productInformation.image} />
+        <Link to="/product-page">
+          <Card.Img variant="top" src={productInformation.image} />
+        </Link>
+
         <Card.Body>
           <Card.Title>{productInformation.name}</Card.Title>
           <Card.Text>{productInformation.price} руб.</Card.Text>

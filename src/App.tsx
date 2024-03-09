@@ -1,10 +1,8 @@
 import React, { Children } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState, useContext } from "react";
 import { Header } from "./Header";
 import { MainPage } from "./MainPage/MainPage";
-import { Good } from "./MainPage/Goods";
-import { GoodsContext } from "./Context/GoodsContextProvider";
+import { ProductPage } from "./MainPage/ProductPage";
 
 export default function App() {
   return (
@@ -12,6 +10,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route path="/mug-shop" element={<MainPage />}></Route>
+        <Route path="/product-page" element={<ProductPage />}></Route>
       </Routes>
     </>
   );

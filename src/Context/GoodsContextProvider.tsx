@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useState } from "react";
-import { Good } from "../MainPage/Goods";
+import { Good } from "../Goods";
 
 export interface ContextType {
   savedGoods: number[];

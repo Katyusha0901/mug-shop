@@ -1,4 +1,4 @@
-import nullMug from "../images/nullMug.webp";
+import nullMug from "./images/nullMug.webp";
 
 export interface Good {
   id: number;

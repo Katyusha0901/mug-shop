@@ -1,7 +1,7 @@
 import "./MainPage.css";
 import { Filter } from "./Filter";
-import { Goods } from "./Goods";
-import { Good } from "./Goods";
+import { Goods } from "../Goods";
+import { Good } from "../Goods";
 import { useState } from "react";
 import { Product } from "./Product";
 
