@@ -9,7 +9,7 @@ import { useState, useContext } from "react";
 import { GoodsContext } from "./Context/GoodsContextProvider";
 
 export function Header() {
-  const { savedGoods, setSavedGoods, goodsInBag, setGoodsInBag } = useContext<{
+  const { savedGoods, goodsInBag } = useContext<{
     savedGoods: number[];
     setSavedGoods: (array: number[]) => void;
     goodsInBag: number[];
