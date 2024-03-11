@@ -7,7 +7,6 @@ import { Product } from "./Product";
 
 export function MainPage() {
   const [visibleMugsWithHandle, setVisibleMugsWithHandle] = useState<boolean>();
-
   const [visibleMugsWithoutHandle, setVisibleMugsWithoutHandle] =
     useState<boolean>();
 
@@ -18,10 +17,12 @@ export function MainPage() {
 
   function showGoodsWithHandle() {
     setVisibleMugsWithHandle(true);
+    setVisibleMugsWithoutHandle(false);
   }
 
   function showGoodsWithoutHandle() {
     setVisibleMugsWithoutHandle(true);
+    setVisibleMugsWithHandle(false);
   }
 
   function defineVisibleProducts() {
