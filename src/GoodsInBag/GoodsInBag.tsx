@@ -40,8 +40,6 @@ export function GoodsInBag() {
           <div className="in-bag-products__text">Нет товаров</div>
         ) : (
           <div className="in-bag-products__goods">
-            <Order />
-
             {goodsInBag.map((id: number) => {
               return (
                 <div className="">
@@ -49,6 +47,7 @@ export function GoodsInBag() {
                 </div>
               );
             })}
+            <Order />
           </div>
         )}
       </div>
