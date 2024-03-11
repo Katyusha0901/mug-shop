@@ -61,39 +61,38 @@ export function Order() {
       className="modal show"
       style={{ display: "block", position: "initial" }}
     >
-      {isGoodsInBag ? (
-        <Modal.Dialog>
-          <div className="order">
-            <div className="order__title">
-              <Modal.Title>Оплатите покупки</Modal.Title>
-            </div>
-            <Modal.Body>
-              <div className="order__check">
-                <p>{sumOfPrice()} руб.</p>
-                <p>{goodsInBag.length} шт.</p>
-              </div>
-            </Modal.Body>
-            <Modal.Body>
-              <input
-                className="order__input"
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-                type="text"
-                name="email"
-                placeholder="Email"
-              ></input>
-              <div className="order__message_color"></div>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="primary" href="#email" onClick={createOrder}>
-                Получить информацию
-              </Button>
-            </Modal.Footer>
+      <Modal.Dialog>
+        <div className="order">
+          <div className="order__title">
+            <Modal.Title>Оплатите покупки</Modal.Title>
           </div>
-        </Modal.Dialog>
-      ) : (
-        <div>Privet</div>
-      )}
+
+          <Modal.Body>
+            <div className="order__check">
+              <p>{sumOfPrice()} руб.</p>
+              <p>{goodsInBag.length} шт.</p>
+            </div>
+          </Modal.Body>
+
+          <Modal.Body>
+            <input
+              className="order__input"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              type="text"
+              name="email"
+              placeholder="Email"
+            ></input>
+            <div className="order__message_color"></div>
+          </Modal.Body>
+
+          <Modal.Footer>
+            <Button variant="primary" href="#email" onClick={createOrder}>
+              Получить информацию
+            </Button>
+          </Modal.Footer>
+        </div>
+      </Modal.Dialog>
     </div>
   );
 }
