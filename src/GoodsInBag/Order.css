@@ -1,0 +1,18 @@
+.order__title {
+  padding: 15px;
+}
+
+.order__check {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order__message_color_red {
+  color: red;
+}
+
+.order__message_color_green {
+  color: rgb(0, 168, 42);
+}
