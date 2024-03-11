@@ -30,11 +30,13 @@ export function GoodsInBag() {
       <div className="in-bag-products__text saved-products__title ">
         Корзина
       </div>
+
       <div className="in-bag-products__header">
         <Link to="/mug-shop">
           <Button variant="primary">Главная страница</Button>
         </Link>
       </div>
+
       <div className="in-bag-products__content">
         {!isGoodsInBag ? (
           <div className="in-bag-products__text">Нет товаров</div>
@@ -47,6 +49,7 @@ export function GoodsInBag() {
                 </div>
               );
             })}
+
             <Order />
           </div>
         )}
