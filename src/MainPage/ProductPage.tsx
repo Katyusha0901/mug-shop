@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { GoodsContext } from "../Context/GoodsContextProvider";
 import { Goods } from "../Goods";
+import { Link } from "react-router-dom";
 
 export function ProductPage() {
   const { productId } = useParams<string>();
@@ -31,6 +32,11 @@ export function ProductPage() {
 
   return (
     <div className="product-page">
+      <div className="product-page__header">
+        <Link to="/mug-shop">
+          <Button variant="primary">Главная страница</Button>
+        </Link>
+      </div>
       <div className="product-page__description">
         <Card.Img
           className="product-page__image"
