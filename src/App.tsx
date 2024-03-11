@@ -10,7 +10,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route path="/mug-shop" element={<MainPage />}></Route>
-        <Route path="/product-page" element={<ProductPage />}></Route>
+        <Route path="/:productId" element={<ProductPage />}></Route>
       </Routes>
     </>
   );

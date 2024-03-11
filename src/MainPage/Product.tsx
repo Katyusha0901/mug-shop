@@ -23,12 +23,13 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
   return (
     <div className="product">
       <Card style={{ width: "18rem" }}>
-        <Link to="/product-page">
+        <Link key={productInformation.id} to={`/${productInformation.id}`}>
           <Card.Img variant="top" src={productInformation.image} />
         </Link>
-
         <Card.Body>
-          <Card.Title>{productInformation.name}</Card.Title>
+          <Link key={productInformation.id} to={`/${productInformation.id}`}>
+            <Card.Title>{productInformation.name}</Card.Title>
+          </Link>
           <Card.Text>{productInformation.price} руб.</Card.Text>
           <div className="product__buttons">
             <Button
