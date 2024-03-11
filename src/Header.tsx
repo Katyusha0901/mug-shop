@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { GoodsContext } from "./Context/GoodsContextProvider";
 
 export function Header() {
@@ -25,7 +25,7 @@ export function Header() {
         </Navbar.Brand>
 
         <ButtonGroup className="me-2" aria-label="First group">
-          <Link to="/saved" className="header__saved">
+          <Link to="/saved-products" className="header__saved">
             <Button variant="secondary">Избранное ({savedGoods.length})</Button>
           </Link>
           <Link to="/bag" className="header__bag">

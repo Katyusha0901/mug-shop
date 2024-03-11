@@ -1,0 +1,19 @@
+.saved-products__header {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.saved-products__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.saved-products__text {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 60px;
+}
