@@ -37,20 +37,24 @@ export function ProductPage() {
           <Button variant="primary">Главная страница</Button>
         </Link>
       </div>
+
       <div className="product-page__description">
         <Card.Img
           className="product-page__image"
           variant="top"
           src={Goods[id].image}
         />
+
         <div className="product-page__card-body">
           <Card.Body>
             <div className="product-page__card-title">
               <Card.Title>{Goods[id].name}</Card.Title>
             </div>
+
             <div className="product-page__card-text">
               <Card.Text>{Goods[id].description}</Card.Text>
             </div>
+
             <div className="product-page__buttons">
               <Button
                 className="product-page__button"
@@ -63,6 +67,7 @@ export function ProductPage() {
               >
                 В избранное {isInSaved()}
               </Button>
+
               <Button
                 variant="primary"
                 onClick={() =>
