@@ -17,12 +17,26 @@ export function ProductPage() {
     setGoodsInBag: (array: number[]) => void;
   }>(GoodsContext);
 
+  function isInSaved() {
+    if (savedGoods.includes(id)) {
+      return "✓";
+    }
+  }
+
+  function isInBag() {
+    if (goodsInBag.includes(id)) {
+      return "✓";
+    }
+  }
+
   return (
     <div className="product-page">
       <div className="product-page__description">
-        <div className="product-page__image">
-          <Card.Img variant="top" src={Goods[id].image} />
-        </div>
+        <Card.Img
+          className="product-page__image"
+          variant="top"
+          src={Goods[id].image}
+        />
         <div className="product-page__card-body">
           <Card.Body>
             <div className="product-page__card-title">
@@ -41,7 +55,7 @@ export function ProductPage() {
                     : setSavedGoods([...savedGoods])
                 }
               >
-                В избранное
+                В избранное {isInSaved()}
               </Button>
               <Button
                 variant="primary"
@@ -51,7 +65,7 @@ export function ProductPage() {
                     : setGoodsInBag([...goodsInBag])
                 }
               >
-                В корзину
+                В корзину {isInBag()}
               </Button>
             </div>
           </Card.Body>
