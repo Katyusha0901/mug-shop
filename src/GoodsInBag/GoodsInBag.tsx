@@ -16,7 +16,6 @@ export function GoodsInBag() {
     setGoodsInBag: (array: number[]) => void;
   }>(GoodsContext);
   const [isGoodsInBag, setIsGoodsInBag] = useState<boolean>(false);
-  const [email, setEmail] = useState<string>("");
 
   useEffect(() => {
     if (goodsInBag.length > 0) {
@@ -41,11 +40,12 @@ export function GoodsInBag() {
           <div className="in-bag-products__text">Нет товаров</div>
         ) : (
           <div className="in-bag-products__goods">
+            <Order />
+
             {goodsInBag.map((id: number) => {
               return (
                 <div className="">
                   <GoodInBag productInformation={Goods[id]} />
-                  <Order />
                 </div>
               );
             })}

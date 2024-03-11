@@ -23,3 +23,9 @@
   font-weight: 700;
   margin-top: 60px;
 }
+
+.saved-products__goods {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}

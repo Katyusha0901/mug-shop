@@ -1,3 +1,7 @@
+.in-bag-product {
+  margin: 10px;
+}
+
 .in-bag-product__card-body {
   display: flex;
   flex-direction: column;
