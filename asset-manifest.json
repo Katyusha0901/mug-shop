@@ -1,10 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.38edef21.js",
-    "index.html": "/index.html",
-    "main.38edef21.js.map": "/static/js/main.38edef21.js.map"
+    "main.css": "/mug-shop/static/css/main.52755838.css",
+    "main.js": "/mug-shop/static/js/main.7268b10d.js",
+    "static/media/6.jpg": "/mug-shop/static/media/6.587b1132a507b3345323.jpg",
+    "static/media/2.jpg": "/mug-shop/static/media/2.8bdf8904f953a40c9749.jpg",
+    "static/media/3.jpg": "/mug-shop/static/media/3.df36f464934e531a9bf9.jpg",
+    "static/media/4.jpg": "/mug-shop/static/media/4.9f7b695695d35e39f6ce.jpg",
+    "static/media/5.jpg": "/mug-shop/static/media/5.b533af4a56fd119d9850.jpg",
+    "static/media/1.webp": "/mug-shop/static/media/1.45e1f44620869a9a955e.webp",
+    "index.html": "/mug-shop/index.html",
+    "main.52755838.css.map": "/mug-shop/static/css/main.52755838.css.map",
+    "main.7268b10d.js.map": "/mug-shop/static/js/main.7268b10d.js.map"
   },
   "entrypoints": [
-    "static/js/main.38edef21.js"
+    "static/css/main.52755838.css",
+    "static/js/main.7268b10d.js"
   ]
 }
