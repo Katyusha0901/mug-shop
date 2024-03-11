@@ -4,3 +4,9 @@
   justify-content: center;
   align-items: center;
 }
+
+.saved-product__close-button {
+  display: flex;
+  align-self: flex-end;
+  margin: 10px;
+}
