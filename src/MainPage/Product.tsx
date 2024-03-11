@@ -38,11 +38,14 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
         <Link key={productInformation.id} to={`/${productInformation.id}`}>
           <Card.Img variant="top" src={productInformation.image} />
         </Link>
+
         <Card.Body>
           <Link key={productInformation.id} to={`/${productInformation.id}`}>
             <Card.Title>{productInformation.name}</Card.Title>
           </Link>
+
           <Card.Text>{productInformation.price} руб.</Card.Text>
+
           <div className="product__buttons">
             <Button
               variant="primary"
@@ -54,6 +57,7 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
             >
               Сохранить {isInSaved()}
             </Button>
+
             <Button
               variant="primary"
               onClick={() =>
