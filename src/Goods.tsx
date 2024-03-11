@@ -1,6 +1,6 @@
-import nullMug from "./images/nullMug.webp";
-import secondMup from "./images/secondMup.jpg";
-import thirdImage from "./images/thirdImage.jpg";
+import first from "./images/1.webp";
+import second from "./images/2.jpg";
+import third from "./images/3.jpg";
 
 export interface Good {
   id: number;
@@ -15,16 +15,15 @@ export const Goods: Good[] = [
   {
     id: 0,
     name: "Кружка",
-    image: nullMug,
+    image: first,
     description: "Чудесная кружка с ручкой для приятных чаепитий",
     price: 300,
     isWithHandle: true,
   },
-
   {
     id: 1,
     name: "Чашка",
-    image: secondMup,
+    image: second,
     description: "Чашка с блюдцем для теплых встреч",
     price: 500,
     isWithHandle: true,
@@ -32,9 +31,9 @@ export const Goods: Good[] = [
   {
     id: 1,
     name: "Стакан",
-    image: thirdImage,
+    image: third,
     description: "Стакан, чтобы пить достаточно воды каждый день",
-    price: 500,
-    isWithHandle: true,
+    price: 200,
+    isWithHandle: false,
   },
 ];
