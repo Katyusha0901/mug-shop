@@ -1,3 +1,7 @@
+.product {
+  margin: 10px;
+}
+
 .product__buttons {
   display: flex;
   flex-direction: row;

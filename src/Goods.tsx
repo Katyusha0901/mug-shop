@@ -1,4 +1,5 @@
 import nullMug from "./images/nullMug.webp";
+import secondMup from "./images/secondMup.jpg";
 
 export interface Good {
   id: number;
@@ -16,6 +17,15 @@ export const Goods: Good[] = [
     image: nullMug,
     description: "Чудесная кружка с ручкой для приятных чаепитий",
     price: 300,
+    isWithHandle: true,
+  },
+
+  {
+    id: 1,
+    name: "Чашка",
+    image: secondMup,
+    description: "Чашка с блюдцем для теплых встреч",
+    price: 500,
     isWithHandle: true,
   },
 ];

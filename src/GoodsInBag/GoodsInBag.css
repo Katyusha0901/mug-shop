@@ -23,14 +23,3 @@
   font-weight: 700;
   margin-top: 60px;
 }
-
-.in-bag-products__total-title {
-  padding: 15px;
-}
-
-.in-bag-products__total-chek {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}

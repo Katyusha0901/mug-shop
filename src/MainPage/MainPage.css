@@ -3,3 +3,9 @@
   flex-direction: column;
   align-items: center;
 }
+
+.main-page__products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
