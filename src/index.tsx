@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
-import { useState, createContext } from "react";
-import { Good } from "./Goods";
 import { GoodsContextProvider } from "./Context/GoodsContextProvider";
 
 const root = ReactDOM.createRoot(
