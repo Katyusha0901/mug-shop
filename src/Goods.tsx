@@ -55,4 +55,12 @@ export const Goods: Good[] = [
     price: 300,
     isWithHandle: false,
   },
+  {
+    id: 5,
+    name: "Пиала",
+    image: sixth,
+    description: "Окунись в культуру Востока",
+    price: 300,
+    isWithHandle: false,
+  },
 ];
