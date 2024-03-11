@@ -1,0 +1,12 @@
+.in-bag-product__card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.in-bag-product__close-button {
+  display: flex;
+  align-self: flex-end;
+  margin: 10px;
+}

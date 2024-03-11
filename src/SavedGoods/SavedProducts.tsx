@@ -2,15 +2,12 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./SavedProducts.css";
-import { useParams } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
 import { GoodsContext } from "../Context/GoodsContextProvider";
 import { Goods } from "../Goods";
 import { SavedProduct } from "./SavedProduct";
 
 export function SavedProducts() {
-  const { productId } = useParams<string>();
-  const id: number = Number(productId);
   const { savedGoods, setSavedGoods } = useContext<{
     savedGoods: number[];
     setSavedGoods: (array: number[]) => void;
@@ -30,6 +27,9 @@ export function SavedProducts() {
 
   return (
     <div className="saved-products">
+      <div className="saved-products__text saved-products__title ">
+        Избранное
+      </div>
       <div className="saved-products__header">
         <Link to="/mug-shop">
           <Button variant="primary">Главная страница</Button>
