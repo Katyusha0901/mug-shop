@@ -4,8 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./SavedProducts.css";
 import { useParams } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
-import { GoodsContext } from "./Context/GoodsContextProvider";
-import { Goods } from "./Goods";
+import { GoodsContext } from "../Context/GoodsContextProvider";
+import { Goods } from "../Goods";
 import { SavedProduct } from "./SavedProduct";
 
 export function SavedProducts() {

@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header } from "./Header";
 import { MainPage } from "./MainPage/MainPage";
 import { ProductPage } from "./MainPage/ProductPage";
-import { SavedProducts } from "./SavedProducts";
+import { SavedProducts } from "./SavedGoods/SavedProducts";
 
 export default function App() {
   return (
