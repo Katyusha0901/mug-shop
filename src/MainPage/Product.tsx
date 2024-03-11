@@ -20,6 +20,18 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
     setGoodsInBag: (array: number[]) => void;
   }>(GoodsContext);
 
+  function isInSaved() {
+    if (savedGoods.includes(productInformation.id)) {
+      return "✓";
+    }
+  }
+
+  function isInBag() {
+    if (goodsInBag.includes(productInformation.id)) {
+      return "✓";
+    }
+  }
+
   return (
     <div className="product">
       <Card style={{ width: "18rem" }}>
@@ -40,7 +52,7 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
                   : setSavedGoods([...savedGoods])
               }
             >
-              Сохранить
+              Сохранить {isInSaved()}
             </Button>
             <Button
               variant="primary"
@@ -50,7 +62,7 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
                   : setGoodsInBag([...goodsInBag])
               }
             >
-              В корзину
+              В корзину {isInBag()}
             </Button>
           </div>
         </Card.Body>
