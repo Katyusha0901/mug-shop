@@ -26,6 +26,7 @@
 
 .saved-products__goods {
   display: flex;
+  justify-content: center;
   flex-direction: row;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
 }
