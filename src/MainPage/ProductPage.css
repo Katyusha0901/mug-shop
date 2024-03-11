@@ -6,16 +6,27 @@
   padding-top: 100px;
 }
 
-.card-body {
+.product-page__card-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 270px;
   height: 270px;
 }
 
-.card-img-top {
-  width: 400px;
+.product-page__card-title {
+  margin-bottom: 50px;
+}
+
+.product-page__card-text {
+  margin-bottom: 70px;
+}
+
+.product-page__image {
+  width: 450px;
+}
+
+.btn {
+  margin-bottom: 10px;
 }
 
 .product-page__description {
@@ -25,12 +36,8 @@
   align-items: center;
 }
 
-.btn {
-  margin: 10px;
-  height: 70px;
-}
-
 .product-page__buttons {
   display: flex;
+  flex-direction: column;
   justify-content: start;
 }
