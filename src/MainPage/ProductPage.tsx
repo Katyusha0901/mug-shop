@@ -15,18 +15,6 @@ export function ProductPage() {
   const { savedGoods, setSavedGoods, goodsInBag, setGoodsInBag } =
     useContext(GoodsContext);
 
-  function isInSaved() {
-    if (savedGoods.includes(id)) {
-      return "✓";
-    }
-  }
-
-  function isInBag() {
-    if (goodsInBag.includes(id)) {
-      return "✓";
-    }
-  }
-
   return (
     <div className="product-page">
       <div className="product-page__header">
@@ -62,7 +50,7 @@ export function ProductPage() {
                     : setSavedGoods([...savedGoods])
                 }
               >
-                В избранное {isInSaved()}
+                {savedGoods.includes(id) ? "В избранное  ✓" : " В избранное"}
               </Button>
 
               <Button
@@ -73,7 +61,7 @@ export function ProductPage() {
                     : setGoodsInBag([...goodsInBag])
                 }
               >
-                В корзину {isInBag()}
+                {goodsInBag.includes(id) ? "В корзину ✓" : "В корзину"}
               </Button>
             </div>
           </Card.Body>
