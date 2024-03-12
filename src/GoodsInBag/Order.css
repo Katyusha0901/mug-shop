@@ -16,3 +16,7 @@
 .order__message_color_green {
   color: rgb(0, 168, 42);
 }
+
+.order__input {
+  width: 50vw;
+}

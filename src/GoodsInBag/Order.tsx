@@ -60,20 +60,22 @@ export function Order() {
       className="modal show"
       style={{ display: "block", position: "initial" }}
     >
-      <Modal.Dialog>
+      <Modal.Dialog style={{ width: "70vw" }}>
         <div className="order">
           <div className="order__title">
-            <Modal.Title>Оплатите покупки</Modal.Title>
+            <Modal.Title style={{ fontSize: "3vw" }}>
+              Оплатите покупки
+            </Modal.Title>
           </div>
 
-          <Modal.Body>
+          <Modal.Body style={{ width: "50vw" }}>
             <div className="order__check">
               <p>{sumOfPrice()} руб.</p>
               <p>{goodsInBag.length} шт.</p>
             </div>
           </Modal.Body>
 
-          <Modal.Body>
+          <Modal.Body style={{ width: "50vw" }}>
             <input
               className="order__input"
               onChange={(e) => setEmail(e.target.value)}
@@ -86,7 +88,20 @@ export function Order() {
           </Modal.Body>
 
           <Modal.Footer>
-            <Button variant="primary" href="#email" onClick={createOrder}>
+            <Button
+              style={{
+                width: "27vw",
+                height: "9vw",
+                padding: "0.5vw",
+                fontSize: "2.5vw",
+                lineHeight: "3vw",
+                paddingTop: "3px",
+                paddingBottom: "3px",
+              }}
+              variant="primary"
+              href="#email"
+              onClick={createOrder}
+            >
               Получить информацию
             </Button>
           </Modal.Footer>

@@ -17,7 +17,20 @@ export function SavedProducts() {
       </div>
       <div className="saved-products__header">
         <Link to={RoutesObject.mainPage}>
-          <Button variant="primary">Главная страница</Button>
+          <Button
+            style={{
+              width: "13vw",
+              height: "4vw",
+              padding: "0.5vw",
+              fontSize: "1.5vw",
+              lineHeight: "1.3vw",
+              paddingTop: "3px",
+              paddingBottom: "3px",
+            }}
+            variant="primary"
+          >
+            Главная страница
+          </Button>
         </Link>
       </div>
       <div className="saved-products__content">
