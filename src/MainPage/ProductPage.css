@@ -8,24 +8,32 @@
 
 .product-page__header {
   position: relative;
-  left: 650px;
+  left: 33vw;
+}
+
+.product-page__header-button {
+  font-size: 2vw;
 }
 
 .product-page__card-body {
   display: flex;
   flex-direction: column;
+  width: 20vw;
+  height: 25vw;
 }
 
 .product-page__card-title {
   margin-bottom: 50px;
+  font-size: 3vw;
 }
 
 .product-page__card-text {
   margin-bottom: 70px;
+  font-size: 2vw;
 }
 
 .product-page__image {
-  width: 450px;
+  width: 50vw;
   margin: 20px;
   border: 0px solid;
   border-radius: 10px;
@@ -46,4 +54,10 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
+  width: 19vw;
+  height: 5vw;
+}
+
+.product-page__button {
+  font-size: 2vw;
 }

@@ -18,7 +18,9 @@ export function ProductPage() {
     <div className="product-page">
       <div className="product-page__header">
         <Link to={RoutesObject.mainPage}>
-          <Button variant="primary">Главная страница</Button>
+          <Button className="product-page__header-button" variant="primary">
+            Главная страница
+          </Button>
         </Link>
       </div>
 
@@ -31,9 +33,9 @@ export function ProductPage() {
 
         <div className="product-page__card-body">
           <Card.Body>
-            <div className="product-page__card-title">
-              <Card.Title>{Goods[id].name}</Card.Title>
-            </div>
+            <Card.Title>
+              <div className="product-page__card-title">{Goods[id].name}</div>
+            </Card.Title>
 
             <div className="product-page__card-text">
               <Card.Text>{Goods[id].description}</Card.Text>
@@ -54,6 +56,7 @@ export function ProductPage() {
 
               <Button
                 variant="primary"
+                className="product-page__button"
                 onClick={() =>
                   !goodsInBag.includes(id)
                     ? setGoodsInBag([...goodsInBag, id])
