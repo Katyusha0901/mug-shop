@@ -10,12 +10,7 @@ import { Order } from "./Order";
 import { RoutesObject } from "../RoutesObject";
 
 export function GoodsInBag() {
-  const { goodsInBag, setGoodsInBag } = useContext<{
-    savedGoods: number[];
-    setSavedGoods: (array: number[]) => void;
-    goodsInBag: number[];
-    setGoodsInBag: (array: number[]) => void;
-  }>(GoodsContext);
+  const { goodsInBag } = useContext(GoodsContext);
 
   return (
     <div className="in-bag-products">
