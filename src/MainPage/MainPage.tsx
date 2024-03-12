@@ -20,20 +20,16 @@ export function MainPage() {
     setVisibleMugsWithHandle(false);
   }
 
-  function defineVisibleProducts() {
-    const visibleGoodsArr = Goods.filter((product) => {
-      switch (visibleMugsWithHandle) {
-        case undefined:
-          return product;
-        case true:
-          return product.isWithHandle;
-        case false:
-          return !product.isWithHandle;
-      }
-    });
-
-    return visibleGoodsArr;
-  }
+  const visibleGoods = Goods.filter((product) => {
+    switch (visibleMugsWithHandle) {
+      case undefined:
+        return product;
+      case true:
+        return product.isWithHandle;
+      case false:
+        return !product.isWithHandle;
+    }
+  });
 
   return (
     <div className="main-page">
@@ -44,7 +40,7 @@ export function MainPage() {
       />
 
       <div className="main-page__products">
-        {defineVisibleProducts().map((product: Good) => {
+        {visibleGoods.map((product: Good) => {
           return <Product productInformation={product} />;
         })}
       </div>
