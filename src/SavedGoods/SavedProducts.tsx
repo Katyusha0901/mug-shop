@@ -11,16 +11,6 @@ import { RoutesObject } from "../RoutesObject";
 export function SavedProducts() {
   const { savedGoods } = useContext(GoodsContext);
 
-  const [isSavedGoods, setIsSavedGoods] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (savedGoods.length > 0) {
-      setIsSavedGoods(true);
-    } else {
-      setIsSavedGoods(false);
-    }
-  }, [savedGoods]);
-
   return (
     <div className="saved-products">
       <div className="saved-products__text saved-products__title ">
