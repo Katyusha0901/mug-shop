@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { GoodsContext } from "../Context/GoodsContextProvider";
 import { Goods } from "../Goods";
 import { Link } from "react-router-dom";
+import { RoutesObject } from "../RoutesObject";
 
 export function ProductPage() {
   const { productId } = useParams<string>();
@@ -33,7 +34,7 @@ export function ProductPage() {
   return (
     <div className="product-page">
       <div className="product-page__header">
-        <Link to="/mug-shop">
+        <Link to={RoutesObject.mainPage}>
           <Button variant="primary">Главная страница</Button>
         </Link>
       </div>

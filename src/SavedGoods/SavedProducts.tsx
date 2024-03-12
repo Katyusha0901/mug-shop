@@ -6,6 +6,7 @@ import { useContext, useState, useEffect } from "react";
 import { GoodsContext } from "../Context/GoodsContextProvider";
 import { Goods } from "../Goods";
 import { SavedProduct } from "./SavedProduct";
+import { RoutesObject } from "../RoutesObject";
 
 export function SavedProducts() {
   const { savedGoods, setSavedGoods } = useContext<{
@@ -31,12 +32,12 @@ export function SavedProducts() {
         Избранное
       </div>
       <div className="saved-products__header">
-        <Link to="/mug-shop">
+        <Link to={RoutesObject.mainPage}>
           <Button variant="primary">Главная страница</Button>
         </Link>
       </div>
       <div className="saved-products__content">
-        {!isSavedGoods ? (
+        {!savedGoods.length ? (
           <div className="saved-products__text">Нет сохраненных</div>
         ) : (
           <div className="saved-products__goods">

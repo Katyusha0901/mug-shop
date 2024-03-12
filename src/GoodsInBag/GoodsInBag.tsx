@@ -7,6 +7,7 @@ import { GoodsContext } from "../Context/GoodsContextProvider";
 import { Goods } from "../Goods";
 import { GoodInBag } from "./GoodInBag";
 import { Order } from "./Order";
+import { RoutesObject } from "../RoutesObject";
 
 export function GoodsInBag() {
   const { goodsInBag, setGoodsInBag } = useContext<{
@@ -32,7 +33,7 @@ export function GoodsInBag() {
       </div>
 
       <div className="in-bag-products__header">
-        <Link to="/mug-shop">
+        <Link to={RoutesObject.mainPage}>
           <Button variant="primary">Главная страница</Button>
         </Link>
       </div>

@@ -3,6 +3,7 @@ import "./Header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext } from "react";
 import { GoodsContext } from "./Context/GoodsContextProvider";
+import { RoutesObject } from "./RoutesObject";
 
 export function Header() {
   const { savedGoods, goodsInBag } = useContext<{
@@ -15,17 +16,17 @@ export function Header() {
   return (
     <div className="header">
       <div className="header__title">
-        <Link to="/mug-shop" className="header__text">
+        <Link to={RoutesObject.mainPage} className="header__text">
           Магазин Кружек
         </Link>
       </div>
 
       <div className="buttons">
-        <Link to="/saved-products" className="buttons__saved">
+        <Link to={RoutesObject.savedProducts} className="buttons__saved">
           Избранное ({savedGoods.length})
         </Link>
 
-        <Link to="/bag" className="buttons__bag">
+        <Link to={RoutesObject.bag} className="buttons__bag">
           Корзина({goodsInBag.length})
         </Link>
       </div>

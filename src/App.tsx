@@ -4,16 +4,23 @@ import { MainPage } from "./MainPage/MainPage";
 import { ProductPage } from "./MainPage/ProductPage";
 import { SavedProducts } from "./SavedGoods/SavedProducts";
 import { GoodsInBag } from "./GoodsInBag/GoodsInBag";
+import { RoutesObject } from "./RoutesObject";
 
 export default function App() {
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/mug-shop" element={<MainPage />}></Route>
-        <Route path="/saved-products" element={<SavedProducts />}></Route>
-        <Route path="/bag" element={<GoodsInBag />}></Route>
-        <Route path="/:productId" element={<ProductPage />}></Route>
+        <Route path={RoutesObject.mainPage} element={<MainPage />}></Route>
+        <Route
+          path={RoutesObject.savedProducts}
+          element={<SavedProducts />}
+        ></Route>
+        <Route path={RoutesObject.bag} element={<GoodsInBag />}></Route>
+        <Route
+          path={RoutesObject.productPage}
+          element={<ProductPage />}
+        ></Route>
       </Routes>
     </>
   );
