@@ -21,7 +21,7 @@
   text-decoration: none;
 }
 
-.buttons__saved {
+.header__saved {
   position: absolute;
   top: 50%;
   right: 10vw;
@@ -31,12 +31,11 @@
   padding: 0 30px;
 }
 
-.buttons__bag {
+.header__bag {
   position: absolute;
   top: 50%;
   right: 1vw;
   transform: translateY(-50%);
-  display: flex;
   color: #fff;
   font-size: 1.5vw;
   padding: 0 30px;

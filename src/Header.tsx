@@ -16,12 +16,12 @@ export function Header() {
         </Link>
       </div>
 
-      <div className="buttons">
-        <Link to={RoutesObject.savedProducts} className="buttons__saved">
+      <div className="header__buttons">
+        <Link to={RoutesObject.savedProducts} className="header__saved">
           Избранное ({savedGoods.length})
         </Link>
 
-        <Link to={RoutesObject.bag} className="buttons__bag">
+        <Link to={RoutesObject.bag} className="header__bag">
           Корзина({goodsInBag.length})
         </Link>
       </div>
