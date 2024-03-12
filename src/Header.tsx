@@ -6,12 +6,7 @@ import { GoodsContext } from "./Context/GoodsContextProvider";
 import { RoutesObject } from "./RoutesObject";
 
 export function Header() {
-  const { savedGoods, goodsInBag } = useContext<{
-    savedGoods: number[];
-    setSavedGoods: (array: number[]) => void;
-    goodsInBag: number[];
-    setGoodsInBag: (array: number[]) => void;
-  }>(GoodsContext);
+  const { savedGoods, goodsInBag } = useContext(GoodsContext);
 
   return (
     <div className="header">
