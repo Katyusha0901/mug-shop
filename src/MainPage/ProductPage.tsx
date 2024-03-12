@@ -12,12 +12,8 @@ import { RoutesObject } from "../RoutesObject";
 export function ProductPage() {
   const { productId } = useParams<string>();
   const id: number = Number(productId);
-  const { savedGoods, setSavedGoods, goodsInBag, setGoodsInBag } = useContext<{
-    savedGoods: number[];
-    setSavedGoods: (array: number[]) => void;
-    goodsInBag: number[];
-    setGoodsInBag: (array: number[]) => void;
-  }>(GoodsContext);
+  const { savedGoods, setSavedGoods, goodsInBag, setGoodsInBag } =
+    useContext(GoodsContext);
 
   function isInSaved() {
     if (savedGoods.includes(id)) {

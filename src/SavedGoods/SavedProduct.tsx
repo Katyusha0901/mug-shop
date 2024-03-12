@@ -12,12 +12,8 @@ interface Props {
 }
 
 export const SavedProduct: React.FC<Props> = ({ productInformation }) => {
-  const { savedGoods, setSavedGoods, goodsInBag, setGoodsInBag } = useContext<{
-    savedGoods: number[];
-    setSavedGoods: (array: number[]) => void;
-    goodsInBag: number[];
-    setGoodsInBag: (array: number[]) => void;
-  }>(GoodsContext);
+  const { savedGoods, setSavedGoods, goodsInBag, setGoodsInBag } =
+    useContext(GoodsContext);
 
   function isInBag() {
     if (goodsInBag.includes(productInformation.id)) {

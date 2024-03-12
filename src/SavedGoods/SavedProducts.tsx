@@ -9,12 +9,7 @@ import { SavedProduct } from "./SavedProduct";
 import { RoutesObject } from "../RoutesObject";
 
 export function SavedProducts() {
-  const { savedGoods, setSavedGoods } = useContext<{
-    savedGoods: number[];
-    setSavedGoods: (array: number[]) => void;
-    goodsInBag: number[];
-    setGoodsInBag: (array: number[]) => void;
-  }>(GoodsContext);
+  const { savedGoods } = useContext(GoodsContext);
 
   const [isSavedGoods, setIsSavedGoods] = useState<boolean>(false);
 
