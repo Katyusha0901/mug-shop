@@ -26,7 +26,7 @@ export const GoodInBag: React.FC<Props> = ({ productInformation }) => {
 
   return (
     <div className="in-bag-product">
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "25vw" }}>
         <div className="in-bag-product__close-button">
           <Button
             variant="primary"

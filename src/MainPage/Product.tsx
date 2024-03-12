@@ -17,7 +17,7 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
 
   return (
     <div className="product">
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "25vw" }}>
         <Link
           key={productInformation.id}
           to={`/product/${productInformation.id}`}
@@ -30,14 +30,20 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
             key={productInformation.id}
             to={`/product/${productInformation.id}`}
           >
-            <Card.Title>{productInformation.name}</Card.Title>
+            <Card.Title className="product__title">
+              {productInformation.name}
+            </Card.Title>
           </Link>
 
-          <Card.Text>{productInformation.price} руб.</Card.Text>
+          <Card.Text className="product__text">
+            {productInformation.price} руб.
+          </Card.Text>
 
           <div className="product__buttons">
             <Button
+              style={{ width: "10.5vw", height: "5vw", padding: "0.5vw" }}
               variant="primary"
+              className="product__text"
               onClick={() =>
                 !savedGoods.includes(productInformation.id)
                   ? setSavedGoods([...savedGoods, productInformation.id])
@@ -50,6 +56,8 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
             </Button>
 
             <Button
+              style={{ width: "10.5vw", height: "5vw", padding: "0.5vw" }}
+              className="product__text"
               variant="primary"
               onClick={() =>
                 !goodsInBag.includes(productInformation.id)

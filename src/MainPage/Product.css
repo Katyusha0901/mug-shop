@@ -2,6 +2,20 @@
   margin: 10px;
 }
 
+.product__title {
+  font-size: 2vw;
+}
+
+.product__text {
+  font-size: 1.2vw;
+  line-height: 1.4vw;
+}
+
+.product__image {
+  height: 37vw;
+  width: 32vw;
+}
+
 .product__buttons {
   display: flex;
   flex-direction: row;
