@@ -6,8 +6,8 @@ interface RoutesType {
 }
 
 export const RoutesObject: RoutesType = {
-  mainPage: "/",
-  savedProducts: "/saved-products",
-  bag: "/bag",
-  productPage: "/product/:productId",
+  mainPage: "/mug-shop",
+  savedProducts: "/mug-shop/saved-products",
+  bag: "/mug-shop/bag",
+  productPage: "/mug-shop/product/:productId",
 };
