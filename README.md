@@ -1,4 +1,4 @@
-#Mug shop
+# Mug shop
 Online mugs shop. Filter mugs, save them or add them to bag, then checkout and be happy!
 Try it [here](https://katyusha0901.github.io/mug-shop/)
 
