@@ -16,15 +16,6 @@ export function GoodsInBag() {
     goodsInBag: number[];
     setGoodsInBag: (array: number[]) => void;
   }>(GoodsContext);
-  const [isGoodsInBag, setIsGoodsInBag] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (goodsInBag.length > 0) {
-      setIsGoodsInBag(true);
-    } else {
-      setIsGoodsInBag(false);
-    }
-  }, [goodsInBag]);
 
   return (
     <div className="in-bag-products">
@@ -39,7 +30,7 @@ export function GoodsInBag() {
       </div>
 
       <div className="in-bag-products__content">
-        {!isGoodsInBag ? (
+        {!goodsInBag.length ? (
           <div className="in-bag-products__text">Нет товаров</div>
         ) : (
           <div className="in-bag-products__goods">
