@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext } from "react";
 import { GoodsContext } from "./Context/GoodsContextProvider";
 import { RoutesObject } from "./RoutesObject";

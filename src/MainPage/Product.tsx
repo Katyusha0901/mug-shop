@@ -1,7 +1,6 @@
 import { Good } from "../Goods";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { GoodsContext } from "../Context/GoodsContextProvider";
 import { useContext } from "react";
 import { Link } from "react-router-dom";

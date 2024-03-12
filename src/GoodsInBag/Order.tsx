@@ -1,6 +1,5 @@
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./GoodsInBag.css";
 import { useContext, useState, useEffect } from "react";
 import { GoodsContext } from "../Context/GoodsContextProvider";

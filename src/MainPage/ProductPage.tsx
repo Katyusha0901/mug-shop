@@ -1,5 +1,4 @@
 import "./ProductPage.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useParams } from "react-router-dom";

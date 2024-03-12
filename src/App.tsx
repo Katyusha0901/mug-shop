@@ -5,6 +5,7 @@ import { ProductPage } from "./MainPage/ProductPage";
 import { SavedProducts } from "./SavedGoods/SavedProducts";
 import { GoodsInBag } from "./GoodsInBag/GoodsInBag";
 import { RoutesObject } from "./RoutesObject";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
   return (
