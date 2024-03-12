@@ -19,12 +19,18 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
   return (
     <div className="product">
       <Card style={{ width: "18rem" }}>
-        <Link key={productInformation.id} to={`/${productInformation.id}`}>
+        <Link
+          key={productInformation.id}
+          to={`/product/${productInformation.id}`}
+        >
           <Card.Img variant="top" src={productInformation.image} />
         </Link>
 
         <Card.Body>
-          <Link key={productInformation.id} to={`/${productInformation.id}`}>
+          <Link
+            key={productInformation.id}
+            to={`/product/${productInformation.id}`}
+          >
             <Card.Title>{productInformation.name}</Card.Title>
           </Link>
 

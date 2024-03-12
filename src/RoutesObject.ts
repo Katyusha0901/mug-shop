@@ -9,5 +9,5 @@ export const RoutesObject: RoutesType = {
   mainPage: "/",
   savedProducts: "/saved-products",
   bag: "/bag",
-  productPage: "/:productId",
+  productPage: "/product/:productId",
 };

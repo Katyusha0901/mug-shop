@@ -41,13 +41,19 @@ export const GoodInBag: React.FC<Props> = ({ productInformation }) => {
           </Button>
         </div>
 
-        <Link key={productInformation.id} to={`/${productInformation.id}`}>
+        <Link
+          key={productInformation.id}
+          to={`/product/${productInformation.id}`}
+        >
           <Card.Img variant="top" src={productInformation.image} />
         </Link>
 
         <Card.Body>
           <div className="in-bag-product__card-body">
-            <Link key={productInformation.id} to={`/${productInformation.id}`}>
+            <Link
+              key={productInformation.id}
+              to={`/product/${productInformation.id}`}
+            >
               <Card.Title>{productInformation.name}</Card.Title>
             </Link>
 
