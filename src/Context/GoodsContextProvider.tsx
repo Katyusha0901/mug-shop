@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useState } from "react";
 
-export interface ContextType {
+interface ContextType {
   savedGoods: number[];
   setSavedGoods: (array: number[]) => void;
   goodsInBag: number[];
