@@ -18,12 +18,6 @@ export const GoodInBag: React.FC<Props> = ({ productInformation }) => {
     setGoodsInBag: (array: number[]) => void;
   }>(GoodsContext);
 
-  function isInSaved() {
-    if (savedGoods.includes(productInformation.id)) {
-      return "✓";
-    }
-  }
-
   return (
     <div className="in-bag-product">
       <Card style={{ width: "25vw" }}>
@@ -80,7 +74,9 @@ export const GoodInBag: React.FC<Props> = ({ productInformation }) => {
                     : setSavedGoods([...savedGoods])
                 }
               >
-                В избранное {isInSaved()}
+                {savedGoods.includes(productInformation.id)
+                  ? "В избранное  ✓"
+                  : " В избранное"}
               </Button>
             </div>
           </div>
