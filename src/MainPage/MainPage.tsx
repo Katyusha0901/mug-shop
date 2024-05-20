@@ -41,7 +41,7 @@ export function MainPage() {
 
       <div className="main-page__products">
         {visibleGoods.map((product: Good) => {
-          return <Product productInformation={product} />;
+          return <Product key={product.id} productInformation={product} />;
         })}
       </div>
     </div>

@@ -4,6 +4,8 @@ import Card from "react-bootstrap/Card";
 import { GoodsContext } from "../Context/GoodsContextProvider";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { RoutesObject } from "../RoutesObject";
+
 
 import "./Product.css";
 
@@ -20,7 +22,7 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
       <Card style={{ width: "25vw" }}>
         <Link
           key={productInformation.id}
-          to={`/product/${productInformation.id}`}
+          to={`/mug-shop/product/${productInformation.id}`}
         >
           <Card.Img variant="top" src={productInformation.image} />
         </Link>
@@ -28,9 +30,9 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
         <Card.Body>
           <Link
             key={productInformation.id}
-            to={`/product/${productInformation.id}`}
+            to={`/mug-shop/product/${productInformation.id}`}
           >
-            <Card.Title className="product__title">
+            <Card.Title style={{fontSize: "1.5vw"}}>
               {productInformation.name}
             </Card.Title>
           </Link>
@@ -41,7 +43,7 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
 
           <div className="product__buttons">
             <Button
-              style={{ width: "10.5vw", height: "5vw", padding: "0.5vw" }}
+              style={{ width: "10.5vw", height: "5vw", padding: "0.5vw", lineHeight: "2vw", fontSize:"1.2vw" }}
               variant="primary"
               className="product__text"
               onClick={() =>
@@ -56,7 +58,7 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
             </Button>
 
             <Button
-              style={{ width: "10.5vw", height: "5vw", padding: "0.5vw" }}
+              style={{ width: "10.5vw", height: "5vw",  padding: "0.5vw", lineHeight: "0.1vw", fontSize:"1.2vw"  }}
               className="product__text"
               variant="primary"
               onClick={() =>

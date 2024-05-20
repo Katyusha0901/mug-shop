@@ -2,13 +2,9 @@
   margin: 10px;
 }
 
-.product__title {
-  font-size: 2vw;
-}
-
 .product__text {
   font-size: 1.2vw;
-  line-height: 1.4vw;
+  line-height: 5px;
 }
 
 .product__image {

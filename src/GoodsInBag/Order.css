@@ -1,3 +1,9 @@
+.order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .order__title {
   padding: 15px;
 }
@@ -18,5 +24,5 @@
 }
 
 .order__input {
-  width: 50vw;
+  width: 10vw;
 }

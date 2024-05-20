@@ -18,7 +18,11 @@ export function ProductPage() {
     <div className="product-page">
       <div className="product-page__header">
         <Link to={RoutesObject.mainPage}>
-          <Button className="product-page__header-button" variant="primary">
+          <Button
+            style={{ fontSize: "1.5vw", lineHeight: "2vw" }}
+            className="product-page__header-button"
+            variant="primary"
+          >
             Главная страница
           </Button>
         </Link>
@@ -26,6 +30,7 @@ export function ProductPage() {
 
       <div className="product-page__description">
         <Card.Img
+          style={{ width: "50vw" }}
           className="product-page__image"
           variant="top"
           src={Goods[id].image}
@@ -43,6 +48,7 @@ export function ProductPage() {
 
             <div className="product-page__buttons">
               <Button
+                style={{ fontSize: "1.5vw", lineHeight: "2vw" }}
                 className="product-page__button"
                 variant="primary"
                 onClick={() =>
@@ -55,6 +61,7 @@ export function ProductPage() {
               </Button>
 
               <Button
+                style={{ fontSize: "1.5vw", lineHeight: "2vw" }}
                 variant="primary"
                 className="product-page__button"
                 onClick={() =>
