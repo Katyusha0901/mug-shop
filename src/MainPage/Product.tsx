@@ -5,8 +5,6 @@ import { GoodsContext } from "../Context/GoodsContextProvider";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { RoutesObject } from "../RoutesObject";
-
-
 import "./Product.css";
 
 interface Props {
@@ -32,7 +30,7 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
             key={productInformation.id}
             to={`/mug-shop/product/${productInformation.id}`}
           >
-            <Card.Title style={{fontSize: "1.5vw"}}>
+            <Card.Title style={{ fontSize: "1.5vw" }}>
               {productInformation.name}
             </Card.Title>
           </Link>
@@ -43,7 +41,13 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
 
           <div className="product__buttons">
             <Button
-              style={{ width: "10.5vw", height: "5vw", padding: "0.5vw", lineHeight: "2vw", fontSize:"1.2vw" }}
+              style={{
+                width: "10.5vw",
+                height: "5vw",
+                padding: "0.5vw",
+                lineHeight: "2vw",
+                fontSize: "1.2vw",
+              }}
               variant="primary"
               className="product__text"
               onClick={() =>
@@ -58,7 +62,13 @@ export const Product: React.FC<Props> = ({ productInformation }) => {
             </Button>
 
             <Button
-              style={{ width: "10.5vw", height: "5vw",  padding: "0.5vw", lineHeight: "0.1vw", fontSize:"1.2vw"  }}
+              style={{
+                width: "10.5vw",
+                height: "5vw",
+                padding: "0.5vw",
+                lineHeight: "0.1vw",
+                fontSize: "1.2vw",
+              }}
               className="product__text"
               variant="primary"
               onClick={() =>
