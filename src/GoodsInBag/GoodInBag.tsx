@@ -65,7 +65,13 @@ export const GoodInBag: React.FC<Props> = ({ productInformation }) => {
 
             <div className="in-bag-product__buttons">
               <Button
-                style={{ width: "10.5vw", height: "5vw", padding: "0.5vw" }}
+                style={{
+                  width: "10.5vw",
+                  height: "5vw",
+                  padding: "0.5vw",
+                  lineHeight: "1.5vw",
+                  fontSize: "1.5vw",
+                }}
                 className="in-bag-product__text"
                 variant="primary"
                 onClick={() =>
